@@ -16,9 +16,9 @@ enum NetworkError: Error {
     func errorMsg() -> String {
         switch self {
         case .fileNotFound:
-            return "Invalid Data. Please Try Later."
+            return Constants.invalidData
         case .dataError(let description):
-            return description ?? "An unexpected error occurred. Please Try Later."
+            return description ?? Constants.unexpectedError
         }
     }
 }

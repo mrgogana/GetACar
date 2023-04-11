@@ -19,15 +19,16 @@ class CarTableViewCell: UITableViewCell {
         // Initialization code
     }
 
+    // MARK: - Public Methods
     func configCell(car: Car) {
         self.carTitleLbl.text = car.make+" "+car.model
         self.carImageView.image = UIImage(named: car.carImageName())
         self.carPriceLbl.text = String.priceString(price: car.customerPrice)
-        
         showRating(rating: car.rating)
     }
     
-    func showRating(rating: Int) {
+    // MARK: - Private Methods
+    fileprivate func showRating(rating: Int) {
         for (_, value) in ratingView.subviews.enumerated() {
             value.isHidden = (value.tag > rating)
         }

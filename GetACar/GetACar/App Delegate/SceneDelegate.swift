@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         ]
        
         navigationBarAppearance.shadowColor = nil
-        navigationBarAppearance.backgroundColor = UIColor(named: "NavOrange")
+        navigationBarAppearance.backgroundColor = UIColor(named: Constants.orangeColor)
         UINavigationBar.appearance().barStyle = .default
         UINavigationBar.appearance().standardAppearance = navigationBarAppearance
         UINavigationBar.appearance().compactAppearance = navigationBarAppearance

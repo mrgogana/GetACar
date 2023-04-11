@@ -10,12 +10,12 @@ import Foundation
 
 // MARK: - Car
 struct Car: Decodable {
-    let consList: [String]
+    var consList: [String]
     let customerPrice: Double
     let make: String
     let marketPrice: Double
     let model: String
-    let prosList: [String]
+    var prosList: [String]
     let rating: Int
     
     var carBrand: CarBrands {

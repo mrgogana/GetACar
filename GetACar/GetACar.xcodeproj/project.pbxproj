@@ -24,6 +24,10 @@
 		145DD06329E4B47F0030EC5B /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145DD06229E4B47F0030EC5B /* NetworkError.swift */; };
 		145DD06529E4B5850030EC5B /* car_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 145DD06429E4B5850030EC5B /* car_list.json */; };
 		145DD06729E5B7280030EC5B /* String+Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145DD06629E5B7280030EC5B /* String+Price.swift */; };
+		145DD06929E5D8080030EC5B /* ProsConsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145DD06829E5D8080030EC5B /* ProsConsTableViewCell.swift */; };
+		145DD06B29E5D9720030EC5B /* ListTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145DD06A29E5D9720030EC5B /* ListTitleTableViewCell.swift */; };
+		145DD06D29E5D9810030EC5B /* ListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145DD06C29E5D9810030EC5B /* ListItemTableViewCell.swift */; };
+		145DD07129E600420030EC5B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145DD07029E600420030EC5B /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,10 @@
 		145DD06229E4B47F0030EC5B /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		145DD06429E4B5850030EC5B /* car_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = car_list.json; sourceTree = "<group>"; };
 		145DD06629E5B7280030EC5B /* String+Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Price.swift"; sourceTree = "<group>"; };
+		145DD06829E5D8080030EC5B /* ProsConsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProsConsTableViewCell.swift; sourceTree = "<group>"; };
+		145DD06A29E5D9720030EC5B /* ListTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTitleTableViewCell.swift; sourceTree = "<group>"; };
+		145DD06C29E5D9810030EC5B /* ListItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemTableViewCell.swift; sourceTree = "<group>"; };
+		145DD07029E600420030EC5B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,21 +123,15 @@
 		145DD02729E49F4D0030EC5B /* GetACar */ = {
 			isa = PBXGroup;
 			children = (
-				145DD02829E49F4D0030EC5B /* AppDelegate.swift */,
-				145DD02A29E49F4D0030EC5B /* SceneDelegate.swift */,
-				145DD02C29E49F4D0030EC5B /* CarListViewControlerViewController.swift */,
-				145DD05829E4AEB30030EC5B /* CarTableViewCell.swift */,
-				145DD05A29E4AFCB0030EC5B /* CarListViewModel.swift */,
-				145DD05C29E4B3220030EC5B /* ListServices.swift */,
-				145DD06029E4B4170030EC5B /* JsonFileReader.swift */,
-				145DD06229E4B47F0030EC5B /* NetworkError.swift */,
-				145DD05E29E4B3E20030EC5B /* Car.swift */,
-				145DD02E29E49F4D0030EC5B /* Main.storyboard */,
-				145DD06629E5B7280030EC5B /* String+Price.swift */,
-				145DD03129E49F4F0030EC5B /* Assets.xcassets */,
-				145DD03329E49F4F0030EC5B /* LaunchScreen.storyboard */,
+				145DD07B29E605E90030EC5B /* App Delegate */,
+				145DD07929E605A50030EC5B /* CarList */,
+				145DD07729E605620030EC5B /* Reusable Cell */,
+				145DD07229E604BA0030EC5B /* Constants */,
+				145DD07429E604E30030EC5B /* Extensions */,
+				145DD07529E604FC0030EC5B /* Model */,
+				145DD07629E605290030EC5B /* DataConnection */,
+				145DD07329E604CD0030EC5B /* Resources */,
 				145DD03629E49F4F0030EC5B /* Info.plist */,
-				145DD06429E4B5850030EC5B /* car_list.json */,
 			);
 			path = GetACar;
 			sourceTree = "<group>";
@@ -149,6 +151,96 @@
 				145DD04B29E49F4F0030EC5B /* GetACarUITestsLaunchTests.swift */,
 			);
 			path = GetACarUITests;
+			sourceTree = "<group>";
+		};
+		145DD07229E604BA0030EC5B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				145DD07029E600420030EC5B /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		145DD07329E604CD0030EC5B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				145DD02E29E49F4D0030EC5B /* Main.storyboard */,
+				145DD03129E49F4F0030EC5B /* Assets.xcassets */,
+				145DD03329E49F4F0030EC5B /* LaunchScreen.storyboard */,
+				145DD06429E4B5850030EC5B /* car_list.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		145DD07429E604E30030EC5B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				145DD06629E5B7280030EC5B /* String+Price.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		145DD07529E604FC0030EC5B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				145DD06229E4B47F0030EC5B /* NetworkError.swift */,
+				145DD05E29E4B3E20030EC5B /* Car.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		145DD07629E605290030EC5B /* DataConnection */ = {
+			isa = PBXGroup;
+			children = (
+				145DD05C29E4B3220030EC5B /* ListServices.swift */,
+				145DD06029E4B4170030EC5B /* JsonFileReader.swift */,
+			);
+			path = DataConnection;
+			sourceTree = "<group>";
+		};
+		145DD07729E605620030EC5B /* Reusable Cell */ = {
+			isa = PBXGroup;
+			children = (
+				145DD05829E4AEB30030EC5B /* CarTableViewCell.swift */,
+				145DD06829E5D8080030EC5B /* ProsConsTableViewCell.swift */,
+				145DD06A29E5D9720030EC5B /* ListTitleTableViewCell.swift */,
+				145DD06C29E5D9810030EC5B /* ListItemTableViewCell.swift */,
+			);
+			path = "Reusable Cell";
+			sourceTree = "<group>";
+		};
+		145DD07829E605850030EC5B /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				145DD02C29E49F4D0030EC5B /* CarListViewControlerViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		145DD07929E605A50030EC5B /* CarList */ = {
+			isa = PBXGroup;
+			children = (
+				145DD07829E605850030EC5B /* View Controller */,
+				145DD07A29E605B40030EC5B /* View Model */,
+			);
+			path = CarList;
+			sourceTree = "<group>";
+		};
+		145DD07A29E605B40030EC5B /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				145DD05A29E4AFCB0030EC5B /* CarListViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		145DD07B29E605E90030EC5B /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				145DD02829E49F4D0030EC5B /* AppDelegate.swift */,
+				145DD02A29E49F4D0030EC5B /* SceneDelegate.swift */,
+			);
+			path = "App Delegate";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,9 +375,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				145DD06B29E5D9720030EC5B /* ListTitleTableViewCell.swift in Sources */,
+				145DD06929E5D8080030EC5B /* ProsConsTableViewCell.swift in Sources */,
 				145DD05B29E4AFCB0030EC5B /* CarListViewModel.swift in Sources */,
 				145DD02D29E49F4D0030EC5B /* CarListViewControlerViewController.swift in Sources */,
 				145DD06729E5B7280030EC5B /* String+Price.swift in Sources */,
+				145DD07129E600420030EC5B /* Constants.swift in Sources */,
+				145DD06D29E5D9810030EC5B /* ListItemTableViewCell.swift in Sources */,
 				145DD02929E49F4D0030EC5B /* AppDelegate.swift in Sources */,
 				145DD05929E4AEB30030EC5B /* CarTableViewCell.swift in Sources */,
 				145DD06129E4B4170030EC5B /* JsonFileReader.swift in Sources */,

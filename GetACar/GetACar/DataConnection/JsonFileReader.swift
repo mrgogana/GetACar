@@ -15,11 +15,9 @@ class JsonFileReader {
                 let jsonResult = try JSONDecoder().decode(decode, from: data)
                 return .success(jsonResult)
               } catch {
-                  print("Not able to convert data.")
                   return .failure(.dataError(error.localizedDescription))
               }
         } else {
-            print("File not found.")
             return .failure(.fileNotFound)
         }
     }

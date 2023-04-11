@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import UIKit
 
 extension String {
+    // MARK: - Static Methods
     static func priceString(price: Double) -> String {
         let prefix = "Price: "
         var priceString = ""
@@ -23,5 +25,18 @@ extension String {
             priceString = "\(price)"
         }
         return prefix+priceString
+    }
+    
+    // MARK: - Public Methods
+    func getHeightOfString() -> CGFloat {
+        let lbl = UILabel()
+        lbl.numberOfLines = 0
+        lbl.font = UIFont.systemFont(ofSize: 17, weight: .bold)
+        lbl.text = self
+
+        let width = 250.0
+         
+        let height = lbl.systemLayoutSizeFitting(CGSize(width: width, height: UIView.layoutFittingCompressedSize.height), withHorizontalFittingPriority: .required, verticalFittingPriority: .fittingSizeLevel).height
+        return height
     }
 }

@@ -12,7 +12,6 @@ protocol ListServices {
 }
 
 extension JsonFileReader: ListServices {
-    
     func getCarList(completion: @escaping(Result<[Car], NetworkError>)->Void) {
         completion(self.getData(filename: "car_list", decode: [Car].self))
     }
