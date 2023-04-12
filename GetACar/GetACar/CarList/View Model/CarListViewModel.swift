@@ -100,7 +100,6 @@ struct Section: Equatable {
 }
 
 // MARK: - Filter Type
-
 enum FilterType: String {
     case make = "Make"
     case model = "Model"

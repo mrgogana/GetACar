@@ -14,12 +14,6 @@ class CarTableViewCell: UITableViewCell {
     @IBOutlet weak var carTitleLbl: UILabel!
     @IBOutlet weak var carImageView: UIImageView!
     @IBOutlet weak var ratingView: UIView!
-    
-    // MARK: - Override Methods
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
     // MARK: - Methods
     func configCell(car: Car) {

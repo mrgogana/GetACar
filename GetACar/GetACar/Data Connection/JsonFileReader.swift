@@ -8,10 +8,13 @@
 import Foundation
 
 class JsonFileReader {
-    func getData<T>(filename: String, decode: [T].Type) -> Result<[T], NetworkError> where T: Decodable {
+    func getData<T, U: DataStorageService>(filename: String,
+                                           decode: [T].Type,
+                                           save: U) -> Result<[T], NetworkError> where T: Decodable {
         if let path = Bundle.main.path(forResource: filename, ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                save.storeCarList(jsonData: data)
                 let jsonResult = try JSONDecoder().decode(decode, from: data)
                 return .success(jsonResult)
               } catch {

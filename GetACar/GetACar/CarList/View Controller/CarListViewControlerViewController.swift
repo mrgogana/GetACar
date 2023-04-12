@@ -24,7 +24,6 @@ class CarListViewControler: UIViewController {
         self.navigationController?.navigationBar.topItem?.title = Constants.appTitle
         
         self.tableView.separatorStyle = .none
-        self.tableView.contentInset = UIEdgeInsets(top: -20, left: 0, bottom: 0, right: 0)
         
         self.carMakeButton.setTitle(Constants.anyMake, for: .normal)
         self.carModelButton.setTitle(Constants.anyModel, for: .normal)
@@ -57,13 +56,6 @@ class CarListViewControler: UIViewController {
             let action = UIAlertAction(title: item, style: .default) { [weak self] action in
                 guard let self = self else { return }
                 self.applyFilter(for: type, title: action.title)
-//                self.viewModel.setFilter(for: type, selectedTitle: action.title)
-//                if type == .make {
-//                    self.carMakeButton.setTitle(action.title, for: .normal)
-//                    self.carModelButton.setTitle(Constants.anyModel, for: .normal)
-//                } else {
-//                    self.carModelButton.setTitle(action.title, for: .normal)
-//                }
                 self.tableView.reloadData()
             }
             actionSheet.addAction(action)
@@ -103,6 +95,7 @@ class CarListViewControler: UIViewController {
     
 }
 
+// MARK: - UITableViewDelegate & UITableViewDataSource Methods
 extension CarListViewControler: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {

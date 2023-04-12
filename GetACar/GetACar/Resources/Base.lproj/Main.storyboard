@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dLy-tZ-4Et">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -88,44 +89,58 @@
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7H-xK-csY">
-                                                    <rect key="frame" x="20" y="42" width="303" height="35"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="viA-e2-vie">
+                                                    <rect key="frame" x="18" y="45" width="305" height="35"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="35" id="Cyy-B2-oUc"/>
+                                                        <constraint firstAttribute="height" constant="35" id="ZVg-oo-BoW"/>
                                                     </constraints>
-                                                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="filled" title="Any make">
-                                                        <color key="baseForegroundColor" name="TextGrey"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Button">
+                                                        <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </buttonConfiguration>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <action selector="tapOnCarMake:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8dN-yQ-4y4"/>
+                                                        <action selector="tapOnCarMake:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k6N-Je-fVO"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EE2-1V-9Cn">
-                                                    <rect key="frame" x="20" y="87" width="303" height="34.333333333333343"/>
-                                                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oqj-2i-SIy">
+                                                    <rect key="frame" x="18" y="90" width="305" height="35"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="filled" title="Any model">
-                                                        <color key="baseForegroundColor" name="TextGrey"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Button">
+                                                        <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </buttonConfiguration>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <action selector="tapOnCarModel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ofr-Hq-B8x"/>
+                                                        <action selector="tapOnCarModel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c95-hY-4Mw"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" name="TextGrey"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="142" id="2MW-2Z-zJi"/>
-                                                <constraint firstItem="EE2-1V-9Cn" firstAttribute="centerX" secondItem="H7H-xK-csY" secondAttribute="centerX" id="2Mv-jJ-Gea"/>
                                                 <constraint firstItem="qtH-oC-p66" firstAttribute="top" secondItem="ln3-7b-BAo" secondAttribute="top" constant="16" id="6Di-c9-fDB"/>
-                                                <constraint firstItem="EE2-1V-9Cn" firstAttribute="width" secondItem="H7H-xK-csY" secondAttribute="width" id="P20-Wf-JkB"/>
-                                                <constraint firstItem="H7H-xK-csY" firstAttribute="leading" secondItem="ln3-7b-BAo" secondAttribute="leading" constant="20" symbolic="YES" id="ZVQ-2x-iJo"/>
-                                                <constraint firstAttribute="trailing" secondItem="H7H-xK-csY" secondAttribute="trailing" constant="20" symbolic="YES" id="dtP-zL-Rw0"/>
-                                                <constraint firstItem="EE2-1V-9Cn" firstAttribute="top" secondItem="H7H-xK-csY" secondAttribute="bottom" constant="10" id="jQq-KC-fdN"/>
+                                                <constraint firstAttribute="trailing" secondItem="viA-e2-vie" secondAttribute="trailing" constant="20" symbolic="YES" id="7mB-Jb-QbF"/>
+                                                <constraint firstItem="Oqj-2i-SIy" firstAttribute="centerX" secondItem="viA-e2-vie" secondAttribute="centerX" id="8CD-gA-Ncn"/>
+                                                <constraint firstItem="viA-e2-vie" firstAttribute="leading" secondItem="qtH-oC-p66" secondAttribute="leading" id="JFw-bO-1p5"/>
+                                                <constraint firstItem="viA-e2-vie" firstAttribute="top" secondItem="qtH-oC-p66" secondAttribute="bottom" constant="8" symbolic="YES" id="L3o-8X-LVa"/>
+                                                <constraint firstItem="Oqj-2i-SIy" firstAttribute="width" secondItem="viA-e2-vie" secondAttribute="width" id="eZM-Zx-qIw"/>
+                                                <constraint firstItem="Oqj-2i-SIy" firstAttribute="height" secondItem="viA-e2-vie" secondAttribute="height" id="jZ6-hD-sE6"/>
                                                 <constraint firstItem="qtH-oC-p66" firstAttribute="leading" secondItem="ln3-7b-BAo" secondAttribute="leading" constant="18" id="jzt-Rw-Pa8"/>
-                                                <constraint firstItem="H7H-xK-csY" firstAttribute="top" secondItem="qtH-oC-p66" secondAttribute="bottom" constant="5" id="qBB-Mc-yso"/>
-                                                <constraint firstItem="EE2-1V-9Cn" firstAttribute="height" secondItem="H7H-xK-csY" secondAttribute="height" multiplier="0.980952" id="r5A-QK-nWj"/>
+                                                <constraint firstItem="Oqj-2i-SIy" firstAttribute="top" secondItem="viA-e2-vie" secondAttribute="bottom" constant="10" id="nby-R6-NoK"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qtH-oC-p66" secondAttribute="trailing" constant="20" symbolic="YES" id="rb0-vg-cGd"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
@@ -404,8 +419,8 @@
                     <navigationItem key="navigationItem" id="l3g-1B-kWC"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="carMakeButton" destination="H7H-xK-csY" id="YC2-Go-swm"/>
-                        <outlet property="carModelButton" destination="EE2-1V-9Cn" id="EqV-cR-Ewa"/>
+                        <outlet property="carMakeButton" destination="viA-e2-vie" id="1XA-uo-BdU"/>
+                        <outlet property="carModelButton" destination="Oqj-2i-SIy" id="RA7-2U-vG5"/>
                         <outlet property="tableView" destination="Va4-bn-Zrg" id="XD5-Ng-O5j"/>
                     </connections>
                 </viewController>

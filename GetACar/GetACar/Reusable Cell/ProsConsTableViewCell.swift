@@ -14,12 +14,6 @@ class ProsConsTableViewCell: UITableViewCell {
     
     // MARK: - Variables
     var car: Car?
-    
-    // MARK: - Override Methods
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
     // MARK: - Methods
     func configCell(car: Car) {
@@ -28,6 +22,7 @@ class ProsConsTableViewCell: UITableViewCell {
     }
 }
 
+// MARK: - UITableViewDelegate & UITableViewDataSource Methods
 extension ProsConsTableViewCell: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         guard let car = self.car else { return 0 }

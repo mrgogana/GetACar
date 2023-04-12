@@ -28,6 +28,8 @@
 		145DD06B29E5D9720030EC5B /* ListTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145DD06A29E5D9720030EC5B /* ListTitleTableViewCell.swift */; };
 		145DD06D29E5D9810030EC5B /* ListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145DD06C29E5D9810030EC5B /* ListItemTableViewCell.swift */; };
 		145DD07129E600420030EC5B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145DD07029E600420030EC5B /* Constants.swift */; };
+		145DD07E29E6EC880030EC5B /* DataStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145DD07D29E6EC880030EC5B /* DataStorageService.swift */; };
+		145DD08029E6ECF40030EC5B /* UserDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145DD07F29E6ECF40030EC5B /* UserDataStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		145DD06A29E5D9720030EC5B /* ListTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTitleTableViewCell.swift; sourceTree = "<group>"; };
 		145DD06C29E5D9810030EC5B /* ListItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemTableViewCell.swift; sourceTree = "<group>"; };
 		145DD07029E600420030EC5B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		145DD07D29E6EC880030EC5B /* DataStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorageService.swift; sourceTree = "<group>"; };
+		145DD07F29E6ECF40030EC5B /* UserDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +134,8 @@
 				145DD07229E604BA0030EC5B /* Constants */,
 				145DD07429E604E30030EC5B /* Extensions */,
 				145DD07529E604FC0030EC5B /* Model */,
-				145DD07629E605290030EC5B /* DataConnection */,
+				145DD07629E605290030EC5B /* Data Connection */,
+				145DD07C29E6EC2A0030EC5B /* Data Storage */,
 				145DD07329E604CD0030EC5B /* Resources */,
 				145DD03629E49F4F0030EC5B /* Info.plist */,
 			);
@@ -189,13 +194,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		145DD07629E605290030EC5B /* DataConnection */ = {
+		145DD07629E605290030EC5B /* Data Connection */ = {
 			isa = PBXGroup;
 			children = (
 				145DD05C29E4B3220030EC5B /* ListServices.swift */,
 				145DD06029E4B4170030EC5B /* JsonFileReader.swift */,
 			);
-			path = DataConnection;
+			path = "Data Connection";
 			sourceTree = "<group>";
 		};
 		145DD07729E605620030EC5B /* Reusable Cell */ = {
@@ -241,6 +246,15 @@
 				145DD02A29E49F4D0030EC5B /* SceneDelegate.swift */,
 			);
 			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		145DD07C29E6EC2A0030EC5B /* Data Storage */ = {
+			isa = PBXGroup;
+			children = (
+				145DD07D29E6EC880030EC5B /* DataStorageService.swift */,
+				145DD07F29E6ECF40030EC5B /* UserDataStorage.swift */,
+			);
+			path = "Data Storage";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,6 +394,7 @@
 				145DD05B29E4AFCB0030EC5B /* CarListViewModel.swift in Sources */,
 				145DD02D29E49F4D0030EC5B /* CarListViewControlerViewController.swift in Sources */,
 				145DD06729E5B7280030EC5B /* String+Price.swift in Sources */,
+				145DD07E29E6EC880030EC5B /* DataStorageService.swift in Sources */,
 				145DD07129E600420030EC5B /* Constants.swift in Sources */,
 				145DD06D29E5D9810030EC5B /* ListItemTableViewCell.swift in Sources */,
 				145DD02929E49F4D0030EC5B /* AppDelegate.swift in Sources */,
@@ -388,6 +403,7 @@
 				145DD02B29E49F4D0030EC5B /* SceneDelegate.swift in Sources */,
 				145DD06329E4B47F0030EC5B /* NetworkError.swift in Sources */,
 				145DD05F29E4B3E20030EC5B /* Car.swift in Sources */,
+				145DD08029E6ECF40030EC5B /* UserDataStorage.swift in Sources */,
 				145DD05D29E4B3220030EC5B /* ListServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -571,7 +587,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -601,7 +617,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

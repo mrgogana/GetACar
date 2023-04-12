@@ -10,12 +10,6 @@ import UIKit
 class ListTitleTableViewCell: UITableViewCell {
     // MARK: - IBOutlets
     @IBOutlet weak var titleLabel: UILabel!
-    
-    // MARK: - Override Methods
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
     // MARK: - Methods
     func configCell(title: String) {
