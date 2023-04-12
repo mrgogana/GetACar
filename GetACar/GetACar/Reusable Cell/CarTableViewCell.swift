@@ -9,17 +9,19 @@ import UIKit
 
 class CarTableViewCell: UITableViewCell {
 
+    // MARK: - IBOutlets
     @IBOutlet weak var carPriceLbl: UILabel!
     @IBOutlet weak var carTitleLbl: UILabel!
     @IBOutlet weak var carImageView: UIImageView!
     @IBOutlet weak var ratingView: UIView!
     
+    // MARK: - Override Methods
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    // MARK: - Public Methods
+    // MARK: - Methods
     func configCell(car: Car) {
         self.carTitleLbl.text = car.make+" "+car.model
         self.carImageView.image = UIImage(named: car.carImageName())

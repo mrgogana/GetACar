@@ -9,16 +9,19 @@ import UIKit
 
 class ProsConsTableViewCell: UITableViewCell {
 
+    // MARK: - IBOutlets
     @IBOutlet weak var proConsTableView: UITableView!
     
+    // MARK: - Variables
     var car: Car?
     
+    // MARK: - Override Methods
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    // MARK: - Public Methods
+    // MARK: - Methods
     func configCell(car: Car) {
         self.car = car
         self.proConsTableView.reloadData()

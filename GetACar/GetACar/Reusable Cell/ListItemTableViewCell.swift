@@ -9,14 +9,16 @@ import UIKit
 
 class ListItemTableViewCell: UITableViewCell {
 
+    // MARK: - IBOutlets
     @IBOutlet weak var itemLabel: UILabel!
     
+    // MARK: - Override Methods
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    // MARK: - Public Methods
+    // MARK: - Methods
     func configCell(item: String) {
         itemLabel.text = item
     }

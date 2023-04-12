@@ -18,4 +18,6 @@ struct Constants {
     static let cons = "Cons:"
     static let invalidData = "Invalid Data. Please Try Later."
     static let unexpectedError = "An unexpected error occurred. Please Try Later."
+    static let anyMake = "Any Make"
+    static let anyModel = "Any Model"
 }

@@ -27,7 +27,7 @@ extension String {
         return prefix+priceString
     }
     
-    // MARK: - Public Methods
+    // MARK: - Methods
     func getHeightOfString() -> CGFloat {
         let lbl = UILabel()
         lbl.numberOfLines = 0

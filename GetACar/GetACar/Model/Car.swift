@@ -19,7 +19,7 @@ struct Car: Decodable {
     let rating: Int
     
     var carBrand: CarBrands {
-        return CarBrands(rawValue: self.make) ?? .NoBrand
+        return CarBrands(rawValue: self.make) ?? .any
     }
     
     func carImageName()->String {
@@ -33,7 +33,7 @@ struct Car: Decodable {
             return "Mercedez_benz_GLC"
         case .alpine:
             return "Alpine_roadster"
-        case .NoBrand:
+        case .any:
             return ""
         }
     }
@@ -44,5 +44,5 @@ enum CarBrands: String {
     case bmw = "BMW"
     case alpine = "Alpine"
     case mercedes = "Mercedes Benz"
-    case NoBrand = "No Brand"
+    case any = "Any Make"
 }

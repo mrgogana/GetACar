@@ -9,8 +9,12 @@ import UIKit
 
 class CarListViewControler: UIViewController {
     
+    // MARK: - IBOutlets Attributes
     @IBOutlet weak var tableView: UITableView!
-
+    @IBOutlet weak var carMakeButton: UIButton!
+    @IBOutlet weak var carModelButton: UIButton!
+    
+    // MARK: - Constants
     let viewModel: CarListViewModel = CarListViewModel()
     
     // MARK: - Override Methods
@@ -21,6 +25,9 @@ class CarListViewControler: UIViewController {
         
         self.tableView.separatorStyle = .none
         self.tableView.contentInset = UIEdgeInsets(top: -20, left: 0, bottom: 0, right: 0)
+        
+        self.carMakeButton.setTitle(Constants.anyMake, for: .normal)
+        self.carModelButton.setTitle(Constants.anyModel, for: .normal)
         
         self.viewModel.getCars { [weak self] _, error in
             guard let self = self else { return }
@@ -40,6 +47,60 @@ class CarListViewControler: UIViewController {
         alertViewController.addAction(actionAlert)
         self.present(alertViewController, animated: true)
     }
+    
+    fileprivate func showActionSheet(type: FilterType, list: [String]) {
+        let actionSheet = UIAlertController(title: type.rawValue,
+                                            message: nil,
+                                            preferredStyle: .actionSheet)
+        
+        for item in list {
+            let action = UIAlertAction(title: item, style: .default) { [weak self] action in
+                guard let self = self else { return }
+                self.applyFilter(for: type, title: action.title)
+//                self.viewModel.setFilter(for: type, selectedTitle: action.title)
+//                if type == .make {
+//                    self.carMakeButton.setTitle(action.title, for: .normal)
+//                    self.carModelButton.setTitle(Constants.anyModel, for: .normal)
+//                } else {
+//                    self.carModelButton.setTitle(action.title, for: .normal)
+//                }
+                self.tableView.reloadData()
+            }
+            actionSheet.addAction(action)
+        }
+        let actionAny = UIAlertAction(title: "Any", style: .default) { [weak self] action in
+            guard let self = self else { return }
+            self.applyFilter(for: type)
+            self.tableView.reloadData()
+        }
+        actionSheet.addAction(actionAny)
+        
+        let actionCancel = UIAlertAction(title: "Cancel", style: .destructive)
+        actionSheet.addAction(actionCancel)
+        present(actionSheet, animated: true)
+    }
+    
+    fileprivate func applyFilter(for type: FilterType, title: String? = nil) {
+        self.viewModel.setFilter(for: type, selectedTitle: title)
+        if type == .make {
+            self.carMakeButton.setTitle(title ?? Constants.anyModel, for: .normal)
+            self.carModelButton.setTitle(Constants.anyModel, for: .normal)
+        } else {
+            self.carModelButton.setTitle(title ?? Constants.anyModel, for: .normal)
+        }
+    }
+    
+    // MARK: - IBAction Methods
+    @IBAction func tapOnCarMake(_ sender: Any) {
+        let list = viewModel.getFiltersData(for: .make)
+        self.showActionSheet(type: .make, list: list)
+    }
+    
+    @IBAction func tapOnCarModel(_ sender: Any) {
+        let list = viewModel.getFiltersData(for: .model)
+        self.showActionSheet(type: .model, list: list)
+    }
+    
 }
 
 extension CarListViewControler: UITableViewDelegate, UITableViewDataSource {

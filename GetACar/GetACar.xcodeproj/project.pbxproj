@@ -104,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				145DD02729E49F4D0030EC5B /* GetACar */,
+				145DD03129E49F4F0030EC5B /* Assets.xcassets */,
 				145DD03E29E49F4F0030EC5B /* GetACarTests */,
 				145DD04829E49F4F0030EC5B /* GetACarUITests */,
 				145DD02629E49F4D0030EC5B /* Products */,
@@ -165,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				145DD02E29E49F4D0030EC5B /* Main.storyboard */,
-				145DD03129E49F4F0030EC5B /* Assets.xcassets */,
 				145DD03329E49F4F0030EC5B /* LaunchScreen.storyboard */,
 				145DD06429E4B5850030EC5B /* car_list.json */,
 			);
